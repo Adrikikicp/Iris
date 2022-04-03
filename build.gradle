@@ -40,6 +40,8 @@ registerCustomOutputTask('ArcaneArts', 'C://Users/arcane/Documents/development/s
 registerCustomOutputTask('Coco', 'D://Documents/MC/plugins')
 registerCustomOutputTask('Strange', 'D://Servers/1.17 Test Server/plugins')
 registerCustomOutputTask('Vatuu', 'D://Minecraft/Servers/1.18.2/plugins')
+//i don't know why
+registerCustomOutputTask('Adrikikicp', 'D://Adrikikicp/Helium/1.18.1/Mappings/yarn-1.18.1')
 // ========================== UNIX ==============================
 registerCustomOutputTaskUnix('CyberpwnLT', '/Users/danielmills/Documents/development/server/plugins')
 registerCustomOutputTaskUnix('PsychoLT', '/Users/brianfopiano/Desktop/REMOTES/RemoteMinecraft/plugins')
@@ -75,7 +77,10 @@ repositories {
         }
     }
     maven { url "https://dl.cloudsmith.io/public/arcane/archive/maven/" }
+    maven { url "https://maven.fabricmc.net" }
     mavenCentral()
+    jcenter()
+    google()
     mavenLocal()
 }
 
@@ -131,6 +136,7 @@ dependencies {
     // Shaded
     implementation 'com.dfsek:Paralithic:0.4.0'
     implementation 'io.papermc:paperlib:1.0.5'
+    implementation 'cuchaz:enigma:2.0.0'
     implementation "net.kyori:adventure-text-minimessage:4.2.0-SNAPSHOT"
     implementation 'net.kyori:adventure-platform-bukkit:4.0.1' // Dont upgrade yet
     implementation 'net.kyori:adventure-api:4.9.3' // Dont upgrade yet
